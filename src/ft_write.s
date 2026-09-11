@@ -19,7 +19,7 @@ ft_write:
 
         sub rsp, 8                          ; Alinha a pilha p chamar a funçao externa do C.
         call __errno_location wrt ..plt     ; Devolve o enderço do errno em rax. (wrt ..plt ) gera a relocalização correta para sistemas PIE. e nao da erro de copilaçao
-        add rsp, 8                          ; Desfaz o alinhamnto
+        add rsp, 8                          ; Desfaz o alinhamento
 
         mov dword [rax], r10d               ; Grava o cod do erro em r10 dentro do errno (d é de dword)
 

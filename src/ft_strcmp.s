@@ -16,20 +16,17 @@ ft_strcmp:
         mov r9b, byte [rsi + rax]       ; Copio o char do segundo argumento (rsi) para um registrador temporario (r9b)
 
         cmp r8b, r9b                    ; Comparo os dois registradores
-        jne .not_equal                  ; jne jump not equal
+        jne .done                ; jne jump not equal
 
         cmp r8b, 0                      ; Comparo a letra com num p ver se a string acabou
-        je .equal
+        je .done
         
         inc rax
         jmp .loop
     
-    .not_equal:
-        mov rax, 1
-        ret
-
-    .equal:
-        mov rax, 0
+    .done:
+        sub r8b, r9b
+        movsx rax, r8b
         ret
 
     .error:
