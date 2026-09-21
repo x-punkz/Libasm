@@ -10,6 +10,8 @@ src/ft_write.s  \
 src/ft_read.s	\
 src/ft_strdup.s \
 src/ft_calloc.s \
+src/ft_list_push_front_bonus.s \
+# src/ft_list_size_bonus.s \
 
 OBJS = $(SRCS:.s=.o)
 
