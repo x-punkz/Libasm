@@ -28,7 +28,7 @@ $(NAME): $(OBJS)
 	@echo "\n     $(GREEN)$(NAME) criada com sucesso!$(RESET)"
 
 bonus: $(OBJS) $(BONUS_OBJS)
-		ar rcs $(NAME) $(OBJS) $(BONUS)
+		ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 		@echo "$(GREEN)$(NAME) criada com sucesso com Bonus!$(RESET)"
 
 .s.o:

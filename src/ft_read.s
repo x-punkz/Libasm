@@ -17,7 +17,7 @@ ft_read:
 
         sub rsp, 8
         call __errno_location wrt ..plt
-        sub rsp, 8
+        add rsp, 8
 
         mov dword [rax], r10d
 
